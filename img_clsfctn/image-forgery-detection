@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Image Forgery Detection | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Kaggle is the world&#x2019;s largest data science community with powerful tools and resources to help you achieve your data science goals." />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="n8sGWjRirZJNgrVTIeRjDQ==" type="text/javascript">
+    window["pageRequestStartTime"] = 1696616162364;
+    window["pageRequestEndTime"] = 1696616162519;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="n8sGWjRirZJNgrVTIeRjDQ==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="https://www.kaggle.com/datasets/labid93/image-forgery-detection" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=dd064d680b3ca5c8a76b" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=7dd02baeefe6b778860b" />
+  
+    
+ 
+      <script nonce="n8sGWjRirZJNgrVTIeRjDQ==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="n8sGWjRirZJNgrVTIeRjDQ==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="n8sGWjRirZJNgrVTIeRjDQ==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+  
+    
+    <meta property="og:url" content="https://www.kaggle.com/datasets/labid93/image-forgery-detection" />
+    <meta property="og:title" content="Image Forgery Detection" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-53.png-14428981/dataset-card.png" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="n8sGWjRirZJNgrVTIeRjDQ==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Image Forgery Detection","description":"# Dataset\nThis dataset was created by labid93\n\n# Contents\n","url":"https://www.kaggle.com/labid93/image-forgery-detection","version":1,"keywords":[],"license":{"@type":"CreativeWork","name":"Unknown","url":""},"identifier":["3626137"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"labid93","url":"https://www.kaggle.com/labid93","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/labid93/image-forgery-detection/download?datasetVersionNumber=1","contentSize":"3829054112 bytes"}],"commentCount":0,"dateModified":"2023-08-14T18:59:47.127Z","discussionUrl":"https://www.kaggle.com/labid93/image-forgery-detection/discussion","alternateName":"","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/new-version-temp-images/default-backgrounds-53.png-14428981/dataset-card.png","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":0},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":40},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":269},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":0}]}</script>
+
+
+  
+    
+
+  
+    
+
+
+    <script nonce="n8sGWjRirZJNgrVTIeRjDQ==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="n8sGWjRirZJNgrVTIeRjDQ==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="n8sGWjRirZJNgrVTIeRjDQ==" src="/static/assets/runtime.js?v=0956775afd60d2b0e7bc" data-turbolinks-track="reload"></script>
+  <script nonce="n8sGWjRirZJNgrVTIeRjDQ==" src="/static/assets/vendor.js?v=baa5d1e70c87da9ac5a7" data-turbolinks-track="reload"></script>
+  <script nonce="n8sGWjRirZJNgrVTIeRjDQ==" src="/static/assets/app.js?v=d9ae70034d2968f178dc" data-turbolinks-track="reload"></script>
+    <script nonce="n8sGWjRirZJNgrVTIeRjDQ==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+<div id="site-container"></div>
+
+<div id="site-body" class="hide">
+    
+
+
+<script nonce="n8sGWjRirZJNgrVTIeRjDQ==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="n8sGWjRirZJNgrVTIeRjDQ==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
